@@ -1,0 +1,20 @@
+{
+  "scenario_name": "СЦЕНАРИЙ 3: ДИНАМИЧЕСКАЯ СМЕНА ИСТОЧНИКОВ",
+  "consumers": [
+    {"name": "City_District", "hourly_consumption": [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]}
+  ],
+  "generators": [
+    {
+      "type": "ConstantOutput",
+      "name": "Grid_NightRate",
+      "capacity": 100.0,
+      "cost_profile": [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+    },
+    {
+      "type": "ConstantGenerator",
+      "name": "Local_Gas",
+      "cost": 10.0,
+      "capacity": 100.0
+    }
+  ]
+}

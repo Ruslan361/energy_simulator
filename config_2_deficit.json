@@ -1,0 +1,41 @@
+{
+  "scenario_name": "СЦЕНАРИЙ 2: НОЧНОЙ ДЕФИЦИТ ЭНЕРГИИ",
+  "consumers": [
+    {"name": "House_A", "hourly_consumption": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]},
+    {"name": "House_B", "hourly_consumption": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]},
+    {"name": "House_C", "hourly_consumption": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]},
+    {"name": "House_D", "hourly_consumption": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]},
+    {"name": "House_E", "hourly_consumption": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]},
+    {"name": "Small_Shop", "hourly_consumption": [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]},
+    {"name": "Supermarket", "hourly_consumption": [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80]},
+    {"name": "Factory_Alpha", "hourly_consumption": [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]},
+    {"name": "Factory_Beta", "hourly_consumption": [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]},
+    {"name": "Hospital", "hourly_consumption": [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]}
+  ],
+  "generators": [
+    {
+      "type": "VariableProfileGenerator",
+      "name": "Solar_Array",
+      "generation_profile": [0, 0, 0, 0, 0, 0, 0, 200, 300, 400, 400, 400, 300, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "cost_profile": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+    },
+    {
+      "type": "ConstantGenerator",
+      "name": "Diesel_1",
+      "cost": 10.0,
+      "capacity": 80.0
+    },
+    {
+      "type": "ConstantGenerator",
+      "name": "Diesel_2",
+      "cost": 12.0,
+      "capacity": 50.0
+    },
+    {
+      "type": "ConstantGenerator",
+      "name": "Diesel_3",
+      "cost": 15.0,
+      "capacity": 20.0
+    }
+  ]
+}
